@@ -9,7 +9,7 @@ sc = SparkContext()
 sqlContext= SQLContext(sc)
 log_nasa = sqlContext.read.text("hdfs:///tmp/log_nasa/")
 
-#Formatando o arquov lido, para ficar no formato de Host,Timestamp,URL,codeHTTP,byte
+#Formatando o arquivo lido, para ficar no formato de Host,Timestamp,URL,codeHTTP,byte
 log_nasa_format = log_nasa.select(regexp_extract('value', r'^([^\s]+\s)', 1).alias('host'),
 regexp_extract('value', r'^.*\[(\d\d/\w{3}/\d{4}:\d{2}:\d{2}:\d{2} -\d{4})]', 1).alias('timestamp'),
 regexp_extract('value', r'^.*"\w+\s+([^\s]+)\s+HTTP.*"', 1).alias('URL'),
