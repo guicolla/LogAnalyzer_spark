@@ -16,7 +16,7 @@ Nasa Log: http://ita.ee.lbl.gov/html/contrib/NASA-HTTP.html
 
 ### Installing
 ```
-git clone https://github.com/guicolla/pyspark-NASA_LogAnalyzer.git
+git clone https://github.com/guicolla/LogAnalyzer_spark.git
 ```
 After do git clone you need to put the file into hdfs
 ```
